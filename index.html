@@ -528,6 +528,10 @@ header {
     box-shadow: 0 15px 40px rgba(40,56,46,.06);
 }
 
+.menu-card + .menu-card {
+    margin-top: 25px;
+}
+
 .menu-image {
     min-height: 390px;
     background:
@@ -537,6 +541,27 @@ header {
     justify-content: center;
     align-items: center;
     padding: 35px;
+}
+
+/* Variasi visual untuk Chicken Karaage */
+
+.karaage-image {
+    background:
+        radial-gradient(circle at center, #D7BD91 0 40%, transparent 41%),
+        linear-gradient(135deg, #B99A61, #E8DCC3);
+}
+
+.karaage-image .menu-rice {
+    background:
+        radial-gradient(ellipse at 25% 28%, #A96A37 0 13%, transparent 14%),
+        radial-gradient(ellipse at 70% 28%, #B87940 0 13%, transparent 14%),
+        radial-gradient(ellipse at 32% 68%, #C18449 0 13%, transparent 14%),
+        radial-gradient(ellipse at 72% 68%, #9D6337 0 13%, transparent 14%),
+        radial-gradient(ellipse at 50% 50%, #E8D7A8 0 57%, #D4BE87 58%);
+}
+
+.karaage-image .menu-rice::after {
+    display: none;
 }
 
 .menu-plate {
@@ -1149,7 +1174,7 @@ footer {
 
         <a href="#home" class="nav-logo">
 
-            <!-- LOGO MATEBOWL -->
+            <!-- LOGO MATEBOWL ASLI -->
             <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
                 <path d="M35 83 C75 96 165 96 205 83 C195 131 165 160 120 163 C75 160 45 131 35 83Z" fill="#28382E"/>
                 <path d="M35 83 C78 97 162 97 205 83" fill="none" stroke="#B99A61" stroke-width="5" stroke-linecap="round"/>
@@ -1272,6 +1297,7 @@ footer {
 
             <div class="about-logo">
 
+                <!-- LOGO MATEBOWL ASLI -->
                 <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
                     <path d="M35 83 C75 96 165 96 205 83 C195 131 165 160 120 163 C75 160 45 131 35 83Z" fill="#F5F0E6"/>
                     <path d="M35 83 C78 97 162 97 205 83" fill="none" stroke="#B99A61" stroke-width="5" stroke-linecap="round"/>
@@ -1298,23 +1324,33 @@ footer {
             </h2>
 
             <p>
-                MateBowl lahir dari ide sederhana: menghadirkan
-                makanan yang enak, praktis, dan menyenangkan
-                untuk dinikmati kapan saja.
+                MateBowl berawal dari sebuah pemikiran sederhana:
+                menikmati makanan yang enak dan mengenyangkan
+                seharusnya tidak harus mengeluarkan biaya besar.
             </p>
 
             <p>
-                Kami percaya bahwa makanan sederhana bisa
-                memberikan kebahagiaan. Karena itu, setiap
-                sajian MateBowl dibuat dengan perhatian pada
-                rasa, porsi, dan pengalaman menikmati makanan.
+                Berangkat dari keinginan menghadirkan pilihan
+                makanan yang praktis dan terjangkau, khususnya
+                bagi mahasiswa dan mereka yang memiliki aktivitas
+                padat, MateBowl hadir sebagai teman untuk
+                menemani setiap harinya.
+            </p>
+
+            <p>
+                Kami percaya bahwa hal-hal sederhana dapat
+                memberikan kebahagiaan. Melalui setiap sajian,
+                kami ingin menghadirkan perpaduan rasa, perhatian,
+                dan harga yang bersahabat. Karena bagi kami,
+                setiap orang berhak menikmati makanan yang baik
+                tanpa harus mengeluarkan biaya berlebihan.
             </p>
 
             <div class="about-values">
 
                 <div class="value-item">
                     <strong>Our Purpose</strong>
-                    <span>Memberikan pengalaman makan yang menyenangkan.</span>
+                    <span>Menghadirkan makanan yang enak dan terjangkau.</span>
                 </div>
 
                 <div class="value-item">
@@ -1347,12 +1383,14 @@ footer {
                 </h2>
 
                 <p class="section-description">
-                    Pilihan sederhana dengan kombinasi rasa
+                    Dua pilihan rice bowl dengan kombinasi rasa
                     yang dibuat untuk menemani harimu.
                 </p>
             </div>
 
         </div>
+
+        <!-- MENU 1: CHICKEN EGG -->
 
         <div class="menu-card">
 
@@ -1367,12 +1405,12 @@ footer {
             <div class="menu-content">
 
                 <div class="menu-tag">
-                    MATEBOWL SIGNATURE
+                    MATEBOWL SIGNATURE 01
                 </div>
 
                 <h3>
                     Chicken<br>
-                    Rice Bowl
+                    Egg
                 </h3>
 
                 <p>
@@ -1393,7 +1431,59 @@ footer {
                     <small>/ bowl</small>
                 </div>
 
-                <a href="#order" class="btn btn-primary">
+                <a href="#order" class="btn btn-primary"
+                   onclick="selectMenu('chicken-egg')">
+                    Order This Menu ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU 2: CHICKEN KARAAGE -->
+
+        <div class="menu-card">
+
+            <div class="menu-image karaage-image">
+
+                <div class="menu-plate">
+                    <div class="menu-rice"></div>
+                </div>
+
+            </div>
+
+            <div class="menu-content">
+
+                <div class="menu-tag">
+                    MATEBOWL SIGNATURE 02
+                </div>
+
+                <h3>
+                    Chicken<br>
+                    Karaage
+                </h3>
+
+                <p>
+                    Nasi hangat dengan potongan ayam karaage
+                    yang dibalut lapisan renyah di luar
+                    dan tetap juicy di dalam. Pilihan
+                    nikmat untuk menemani harimu.
+                </p>
+
+                <div class="menu-details">
+                    <span>Chicken Karaage</span>
+                    <span>Crispy</span>
+                    <span>Rice Bowl</span>
+                </div>
+
+                <div class="menu-price">
+                    <strong>Rp15.000</strong>
+                    <small>/ bowl</small>
+                </div>
+
+                <a href="#order" class="btn btn-primary"
+                   onclick="selectMenu('chicken-karaage')">
                     Order This Menu ↗
                 </a>
 
@@ -1499,7 +1589,7 @@ footer {
                     <div class="step-number">01</div>
                     <div>
                         <strong>Pilih Menu</strong>
-                        <p>Tentukan jumlah pesananmu.</p>
+                        <p>Tentukan menu dan jumlah pesananmu.</p>
                     </div>
                 </div>
 
@@ -1552,6 +1642,22 @@ footer {
                         id="customerPhone"
                         placeholder="08xxxxxxxxxx"
                         required>
+                </div>
+
+                <!-- PILIH MENU -->
+
+                <div class="form-group">
+                    <label for="selectedMenu">Pilih Menu</label>
+
+                    <select id="selectedMenu" required>
+                        <option value="chicken-egg">
+                            Chicken Egg — Rp12.000
+                        </option>
+
+                        <option value="chicken-karaage">
+                            Chicken Karaage — Rp15.000
+                        </option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -1657,7 +1763,7 @@ footer {
             <div class="contact-details">
                 <span>📍 Area kampus — Makassar</span>
                 <span>🕛 Jam pemesanan: 12.00–14.00</span>
-                <span>📱 WhatsApp: Sesuaikan nomor resmi</span>
+                <span>📱 WhatsApp: 0878-3916-1958</span>
             </div>
 
         </div>
@@ -1682,7 +1788,7 @@ footer {
                 </div>
 
                 <p class="footer-description">
-                    Good your day UP!
+                    Make your day UP!
                     A little bowl of happiness for your everyday.
                 </p>
 
@@ -1732,10 +1838,16 @@ footer {
 // ==================================
 
 const CONFIG = {
-    price: 12000,
+    prices: {
+        "chicken-egg": 12000,
+        "chicken-karaage": 15000
+    },
 
-    // GANTI DENGAN NOMOR WHATSAPP MATEBOWL
-    // Contoh: 6281234567890
+    menuNames: {
+        "chicken-egg": "Chicken Egg",
+        "chicken-karaage": "Chicken Karaage"
+    },
+
     whatsapp: "6287839161958"
 };
 
@@ -1763,7 +1875,19 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
 // ==================================
-// ORDER QUANTITY
+// MENU SELECTION
+// ==================================
+
+const selectedMenu = document.getElementById("selectedMenu");
+
+function selectMenu(menuId) {
+    selectedMenu.value = menuId;
+    updateTotal();
+}
+
+
+// ==================================
+// ORDER QUANTITY & TOTAL
 // ==================================
 
 const quantityInput = document.getElementById("quantity");
@@ -1772,13 +1896,17 @@ const totalPrice = document.getElementById("totalPrice");
 function updateTotal() {
 
     const quantity = Number(quantityInput.value);
+    const menuId = selectedMenu.value;
+    const price = CONFIG.prices[menuId];
 
-    const total = quantity * CONFIG.price;
+    const total = quantity * price;
 
     totalPrice.textContent =
         "Rp" + total.toLocaleString("id-ID");
 
 }
+
+selectedMenu.addEventListener("change", updateTotal);
 
 document.getElementById("minusBtn").addEventListener("click", () => {
 
@@ -1815,6 +1943,10 @@ document.getElementById("orderForm").addEventListener("submit", function(event) 
 
     const name = document.getElementById("customerName").value.trim();
     const phone = document.getElementById("customerPhone").value.trim();
+    const menuId = selectedMenu.value;
+    const menuName = CONFIG.menuNames[menuId];
+    const price = CONFIG.prices[menuId];
+
     const quantity = Number(quantityInput.value);
     const pickup = document.getElementById("pickup").value;
     const location = document.getElementById("location").value.trim();
@@ -1825,12 +1957,12 @@ document.getElementById("orderForm").addEventListener("submit", function(event) 
         return;
     }
 
-    if (CONFIG.whatsapp.includes("x")) {
-        alert("Nomor WhatsApp MateBowl belum diatur. Silakan isi nomor WhatsApp pada bagian CONFIG di dalam kode.");
+    if (!menuName || !price) {
+        alert("Silakan pilih menu terlebih dahulu.");
         return;
     }
 
-    const total = quantity * CONFIG.price;
+    const total = quantity * price;
 
     const message =
 `HALO MATEBOWL!
@@ -1841,7 +1973,8 @@ Nama: ${name}
 Nomor HP: ${phone}
 
 Pesanan:
-Chicken Rice Bowl
+${menuName}
+Harga: Rp${price.toLocaleString("id-ID")} / bowl
 Jumlah: ${quantity} bowl
 
 Metode: ${pickup}
@@ -1857,7 +1990,7 @@ Terima kasih!
 Make Your Day UP!`;
 
     const whatsappURL =
-        "https://wa.me/" + 
+        "https://wa.me/" +
         CONFIG.whatsapp +
         "?text=" +
         encodeURIComponent(message);
@@ -1873,6 +2006,13 @@ Make Your Day UP!`;
 
 document.getElementById("year").textContent =
     new Date().getFullYear();
+
+
+// ==================================
+// INITIAL TOTAL
+// ==================================
+
+updateTotal();
 
 </script>
 
